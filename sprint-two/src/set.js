@@ -21,6 +21,7 @@ setPrototype.remove = function(item){
   delete this._storage[item];
 };
 
+
 /*
  * Complexity: What is the time complexity of the above functions?
  */
