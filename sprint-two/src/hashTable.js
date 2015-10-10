@@ -3,6 +3,7 @@ var HashTable = function(){
   this._storage = LimitedArray(this._limit);
 };
 
+// Time Complexity = O(1) **(worst case would be O(n))
 HashTable.prototype.insert = function(k, v){
   var i = getIndexBelowMaxForKey(k, this._limit);
   var currentBucket = this._storage.get(i);
@@ -23,6 +24,7 @@ HashTable.prototype.insert = function(k, v){
   }
 };
 
+// Time Complexity = O(1) **(worst case would be O(n))
 HashTable.prototype.retrieve = function(k){
   var i = getIndexBelowMaxForKey(k, this._limit);
   var currentBucket = this._storage.get(i);
@@ -34,6 +36,7 @@ HashTable.prototype.retrieve = function(k){
   }, null);
 };
 
+// Time Complexity = O(1) **(worst case would be O(n))
 HashTable.prototype.remove = function(k){
   var i = getIndexBelowMaxForKey(k, this._limit);
   var currentBucket = this._storage.get(i);
